@@ -143,8 +143,8 @@ const handleReset = () => {
   numberOfPeopleInput.value = "";
 
   // --------- Deselectam butonul de tip selectat------
-  const selectedTipButton = document.querySelector(".selected-tip"); 
-  // este declarata doar in functia de mai sus
+  const selectedTipButton = document.querySelector(".selected-tip");
+
   if (selectedTipButton !== null) {
     selectedTipButton.classList.remove("selected-tip");
   }
