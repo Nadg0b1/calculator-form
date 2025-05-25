@@ -143,26 +143,23 @@ const handleReset = () => {
   numberOfPeopleInput.value = "";
 
   // --------- Deselectam butonul de tip selectat------
-  const selectedTipButton = document.querySelector(".selected-tip"); // declaram din nou deoarece
+  const selectedTipButton = document.querySelector(".selected-tip"); 
   // este declarata doar in functia de mai sus
   if (selectedTipButton !== null) {
     selectedTipButton.classList.remove("selected-tip");
   }
 
-  // declaram din nou constanta pentru border pe eroare iar mai jos ii dam remove la clasa CSS dupa reset.
   const onErrorBorderBillInput = document.querySelector("#bill");
   const onErrorBorderPeopleInput = document.querySelector("#number-of-people");
 
-  // Ascundem erorile, daca sunt afisate(le adaugam clasa hide)
   billInputError.classList.add("hide");
   customTipInputError.classList.add("hide");
   peopleInputError.classList.add("hide");
   onErrorBorderBillInput.classList.remove("on-error-border-input");
   onErrorBorderPeopleInput.classList.remove("on-error-border-input");
 
-  /// resetare rezultate
   tipPerPersonParagraph.innerText = "$0.00";
   totalPerPersonParagraph.innerText = "$0.00";
 };
 
-resetButton.addEventListener("click", handleReset); // golim imputuri, deselectare button , resetare cifre din zona de rezultate.
+resetButton.addEventListener("click", handleReset);
